@@ -1,9 +1,5 @@
 //mi nombre es Tomas grimaux, bienvenido a mi primer Entrega!
 //mi proyecto es un ecommerce de zapatillas las mas top del mercado!. para integrar JS como primer partida se me ocurrio 
-//que cuando el usuario ingrese a la pagina le pregunte de que pais es, de esa forma voy expresar las valores en la moneda correcta.
-//otro concepto que puedo aplicar mas adelante es tener la opcion de si es en Argentina que el envio sea gratis, pero si es resto del mundo se lo calcul segun region(de ser posible el envio, sino que le diga que no es posible)
-// para ello realice 3 funciones las 2 primeras funcionan pero con la tercera tengo problemas (creo que seria la que mejor aplica para cuando aprenda como devolver texto en mi HTML voia js).
-// por el momento deje solamente sin marcar lo que me funciono que fue el siemplre if, el switch que tambien arme como segunda opcion tambien sirve.
 
 
 //PRIMER OPCION
@@ -91,6 +87,7 @@ const agregarProducto = () => {
     listaZapatillas.push(productoNuevo);
 }
 
+var miCarrito = [];
 
 class Carrito {
     constructor(marca, precio, talle) {
@@ -107,7 +104,6 @@ const agregarCarrito = () => {
     miCarrito.push(productoSeleccionado);
 }
 
-var miCarrito = [];
 
 function actualizarMicarrito(miCarrito, seleccion) {
     if (miCarrito.indexOf(seleccion) === -1) {
@@ -117,6 +113,10 @@ function actualizarMicarrito(miCarrito, seleccion) {
         alert (`El siguiente producto ya esta en tu carrito ${seleccion}`);
     }
 }
+
+//filtros
+let buscarPorPrecioAlto = listaZapatillas.filter(producto => producto.precio > 15001);
+let buscarPorPrecioBajo = listaZapatillas.filter(producto => producto.precio < 15000);
 
 //funcion suma total de precio en mi carrito con map y reduce
 
@@ -131,11 +131,5 @@ let miCarritocondescuento = listaZapatillas.map(producto => producto.precio = pr
 //listaZapatillas.forEach((producto)=> {
     //console.log(`este producto es ${producto.nombre}, su precio es $${producto.precio} y su talle es N${producto.preciotalle}`
 //});
-
-
-
-let buscarPorPrecioAlto = listaZapatillas.filter(producto => producto.precio > 15001);
-let buscarPorPrecioBajo = listaZapatillas.filter(producto => producto.precio < 15000);
-
 
 
