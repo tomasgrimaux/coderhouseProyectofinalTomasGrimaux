@@ -44,3 +44,20 @@ a:hover{
 b, p, a, form, button, h4, h5, h6{
   font-family: 'Montserrat', sans-serif;
 }
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+
+input:focus {
+  border: 2px solid #f2796e;
+}
+
+
+
