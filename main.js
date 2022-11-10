@@ -1,3 +1,5 @@
+
+
 class Zapatilla {
     constructor(id, marca, descripcion, genero, precio, talle) {
         this.id = id;
